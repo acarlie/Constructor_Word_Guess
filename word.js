@@ -3,16 +3,22 @@ const Letter = require("./letter");
 function Word(word){
     this.arr = word.split('');
     this.letters = this.arr.map(x => new Letter(x));
-    this.hasWon = () => this.letters.every(x => x.guessed === true);
+    this.guesses = 5;
 }
-
+ 
 Word.prototype = {
+    hasLost: function(){
+        return this.guesses === 0 ? true : false;
+    },
+    hasWon: function(){
+        return this.letters.every(x => x.guessed === true);
+    },
     print: function(){
         let toPrint = '';
         for (let x of this.letters){
             toPrint += x.display() + ' ';
         }
-        console.log(toPrint);
+        console.log(toPrint + '\n');
     },
     checkLetter: function(guess){
         for (let x of this.letters){
