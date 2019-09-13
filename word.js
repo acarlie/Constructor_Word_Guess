@@ -3,7 +3,7 @@ const Letter = require("./letter");
 function Word(word){
     this.arr = word.split('');
     this.letters = this.arr.map(x => new Letter(x));
-    this.guesses = 5;
+    this.guesses = 8;
 }
  
 Word.prototype = {
@@ -18,7 +18,7 @@ Word.prototype = {
         for (let x of this.letters){
             toPrint += x.display() + ' ';
         }
-        console.log(toPrint + '\n');
+        console.log(`\n${toPrint}\n`);
     },
     checkLetter: function(guess){
         for (let x of this.letters){
