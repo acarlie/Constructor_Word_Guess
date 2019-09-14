@@ -80,7 +80,7 @@ const game = {
             me.guessAndRespond(word, remain);
             
         } else {
-            console.log(' Okay :-( ' .info);
+            console.log('\n Okay :-( ' .info);
         }
     }
 }
