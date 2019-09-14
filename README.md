@@ -1,7 +1,7 @@
 # CLI Word Guessing Game
 'CLI Word Guessing Game' is a word guessing game featuring Node.JS and JavaScript constructor functions (Created by Amelia Carlie).
 
----
+![Screen capture gif of word guessing game.](example2.gif)
 
 ### How to Install
 *This CLI application requires Node.JS. If Node.JS is not installed, see this link to install: https://nodejs.org/en/download/.*
